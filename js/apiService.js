@@ -396,25 +396,12 @@ const renderProductDetail = async (prodParam) => {
                                     <hr />
 
                                     <div class="info-box info-box-addto added">
-                                        <span>
-                                            <i class="add"><i class="fa fa-heart-o"></i> Add to favorites</i>
-                                            <i class="added"><i class="fa fa-heart"></i> Remove from favorites</i>
+                                        <span onclick={handleAddCompare(${item.prod_id})}>
+                                            <i ><i class="fa fa-heart-o"></i> Add to compare</i>
+                                            
                                         </span>
                                     </div>
 
-                                    <div class="info-box info-box-addto">
-                                        <span>
-                                            <i class="add"><i class="fa fa-eye-slash"></i> Add to compare</i>
-                                            <i class="added"><i class="fa fa-eye"></i> Remove from Watch list</i>
-                                        </span>
-                                    </div>
-
-                                    <div class="info-box info-box-addto">
-                                        <span>
-                                            <i class="add"><i class="fa fa-star-o"></i> Add to Collection</i>
-                                            <i class="added"><i class="fa fa-star"></i> Remove from Collection</i>
-                                        </span>
-                                    </div>
 
                                 </div>
                                 <!--/clearfix-->
