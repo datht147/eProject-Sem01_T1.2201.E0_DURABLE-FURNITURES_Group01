@@ -100,7 +100,7 @@ if (listCompare.length > 0) {
 
                             <div class="info-box info-box-addto added">
                                 <span onclick={handleRemoveCompare(${item.prod_id})}>
-                                    <i class=""><i class="fa fa-heart-o"></i> Remove compare</i>
+                                    <i class=""><i class="icon icon-compare"></i> Remove compare</i>
                                    
                                 </span>
                             </div>

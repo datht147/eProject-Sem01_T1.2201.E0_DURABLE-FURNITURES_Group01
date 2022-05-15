@@ -397,7 +397,7 @@ const renderProductDetail = async (prodParam) => {
 
                                     <div class="info-box info-box-addto added">
                                         <span onclick={handleAddCompare(${item.prod_id})}>
-                                            <i ><i class="fa fa-heart-o"></i> Add to compare</i>
+                                            <i ><i class="icon icon-compare"></i> Add to compare</i>
                                             
                                         </span>
                                     </div>
