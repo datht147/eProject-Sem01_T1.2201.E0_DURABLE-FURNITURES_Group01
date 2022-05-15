@@ -6,9 +6,10 @@ const convertCurrent = (number) => {
     });
 }
 
+const renderCompareList = () => {
 const listCompare = JSON.parse(localStorage.getItem('compareList'))
 console.log(listCompare)
-if (listCompare?.length > 0) {
+if (listCompare.length > 0) {
     document.getElementById('compare-list').innerHTML = listCompare.map(
         (item, index) => {
             return `
@@ -22,8 +23,8 @@ if (listCompare?.length > 0) {
                             <div class=" product-flex-gallery">
 
                 <div class="owl-product-gallery owl-carousel owl-theme open-popup-gallery">
-                    <a href="./assets/images/product-10.jpg"><img src="${item.prod_img}" alt="" /></a>
-                    <a href="./assets/images/product-9.jpg"><img src="./assets/images/product-9.jpg" alt="" /></a>
+                    <a href="${item.prod_img}"><img src="${item.prod_img}" alt="" /></a>
+                    <a href="${item.prod_gallery}"><img src="${item.prod_gallery}" alt="" /></a>
                 </div>
                 </div>
                             <div class="price">
@@ -98,9 +99,9 @@ if (listCompare?.length > 0) {
                             <hr />
 
                             <div class="info-box info-box-addto added">
-                                <span>
-                                    <i class="add"><i class="fa fa-heart-o"></i> Add to favorites</i>
-                                    <i class="added"><i class="fa fa-heart"></i> Remove from favorites</i>
+                                <span onclick={handleRemoveCompare(${item.prod_id})}>
+                                    <i class=""><i class="fa fa-heart-o"></i> Remove compare</i>
+                                   
                                 </span>
                             </div>
 
@@ -131,4 +132,20 @@ if (listCompare?.length > 0) {
         <strong>No product to compare</strong>
     </div>
     </div>`
+}
+}
+renderCompareList();
+
+const handleRemoveCompare = (id) => {
+    console.log('remove compare', id);
+    let cpList = JSON.parse(localStorage.getItem('compareList'))
+    // REMOVE ITEM
+    let itemRemove = cpList.findIndex(item => item.prod_id === id)
+    console.log(itemRemove)
+    // UPDATE COMPARE LIST
+    cpList.splice(itemRemove, 1)
+    localStorage.setItem('compareList', JSON.stringify(cpList))
+    /// rerender list item
+
+    renderCompareList();
 }

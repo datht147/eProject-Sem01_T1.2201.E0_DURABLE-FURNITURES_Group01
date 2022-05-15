@@ -48,7 +48,7 @@ const handleAddCompare = (proID) => {
             return compareList;
         }
     }
-    console.log('compare', compareCounter())
+    
 }
 const renderProducts = (element, productArr, pageSize, pageNumber) => {
     let elementId = document.getElementById(element);
