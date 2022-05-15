@@ -350,7 +350,7 @@ const renderProductDetail = async (prodParam) => {
 
                                     <div class="info-box">
                                         <span><strong>Available Colors</strong></span>
-                                        ${item.prod_color}
+                                        ${item.prod_colors}
                                     </div>
 
                                     <hr />
