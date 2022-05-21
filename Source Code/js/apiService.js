@@ -386,6 +386,19 @@ const renderProductDetail = async (prodParam) => {
                                             </span>
                                         </span>
                                     </div>
+                                    <hr />
+
+                                    <div class="info-box">
+                                        
+                                        <span>
+                                            <span class="row">
+                                               
+                                                <span class="col-6">
+                                                    <a href="${item.prod_slug}" class="btn btn-success" target="_blank">Download Brochure</a>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </div>
 
                                     <hr />
 
